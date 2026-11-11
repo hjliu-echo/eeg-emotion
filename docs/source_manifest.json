@@ -1,0 +1,18 @@
+[
+  {
+    "path": "ST-SHAP_3k_final.ipynb",
+    "sha256": "105df6605cc9261ef526c53d75d5101a3beaf7f8b4a0e78cd953629583aa3940",
+    "bytes": 173790
+  },
+  {
+    "path": "ST-SHAP_3single_final.ipynb",
+    "sha256": "a8472dba509cc2ee1a459431e89d532a661bc70aae5b7f4ffcf11391902489b3",
+    "bytes": 30207
+  },
+  {
+    "path": "model/SWIN_trans.py",
+    "sha256": "d95d2b515f485e1cab7cc9f28231fb90f713c2be7311e1d5a66087969816b278",
+    "identical_to_bundled_upstream": true,
+    "curation_change": "floor() -> floor_() in drop_path_f; tracked in THIRD_PARTY.md"
+  }
+]

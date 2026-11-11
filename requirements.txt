@@ -1,0 +1,5 @@
+# Minimum direct dependencies; tested versions are recorded in docs/VALIDATION.md.
+numpy>=1.24,<3
+scipy>=1.13,<2
+scikit-learn>=1.3,<2
+torch>=2.1,<3
