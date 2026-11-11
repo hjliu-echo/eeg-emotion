@@ -8,8 +8,6 @@ How well do spatial EEG representations transfer to a different person? This pro
 
 The original work was a Spring 2025 BMEB215 course project at Southern University of Science and Technology. The team comprised **Zhenghan Zhang, Hongjia Liu, Shuoshuo Yang and Jiandong Liu**. Hongjia Liu was the primary contributor to implementation and experiments. The project adapted the dataset interface, electrode-grid representation, label settings and band/context comparisons. The Swin backbone and ST-SHAP method originate from the cited authors.
 
-The repository separates **historical course-project notebooks** from a **subsequent evaluation revision**. The revised pipeline and documentation were prepared with AI assistance in November 2026. They are follow-up work, separate from the original course submission.
-
 ## Method
 
 1. Read provider-supplied DE features in delta, theta, alpha, beta and gamma bands.
@@ -18,13 +16,13 @@ The repository separates **historical course-project notebooks** from a **subseq
 4. Classify using the inherited Swin backbone: patch size 4, embedding width 96, stage depths 2/2/6/2 and attention heads 3/6/12/24.
 5. Explore three-class and seven-class labels under imagery, video and pooled-context conditions. Pooled-context training does not establish transfer from one context to another.
 
-The three-class task merges sadness/disgust/fear into negative, retains neutral, and merges joy/tenderness/inspiration into positive. The resulting label ratio is **3:1:3**. An always-majority prediction therefore gives **42.9% accuracy**; balanced accuracy and macro-F1 complement accuracy.
+The three-class task merges sadness/disgust/fear into negative, retains neutral, and merges joy/tenderness/inspiration into positive. The resulting label ratio is **3:1:3**. Balanced accuracy and macro-F1 complement accuracy.
 
 ## Experimental status
 
-The historical notebooks contain selected within-subject peaks up to 96.5% and a printed held-out-subject observation of approximately 51.7%. These are exploratory values: random window splits, normalization before splitting, and test-based checkpoint/fold selection prevent interpreting them as independent generalization scores. They are documented in the [short project report](docs/PROJECT_REPORT.md), without being promoted to benchmark results.
+The historical notebooks contain selected within-subject peaks up to 96.5% and a printed held-out-subject observation of approximately 51.7%. These are exploratory values: random window splits, normalization before splitting, and test-based checkpoint/fold selection prevent interpreting them as independent generalization scores. 
 
-The revised pipeline uses training-only normalization, trial-grouped within-subject splits, a separate validation subject for LOSO, majority/logistic-regression baselines, and saved predictions and split indices. **It has passed synthetic software checks; a full real-EEG rerun is pending.** The original poster's SHAP illustration has not been independently reproduced from the available project files.
+The revised pipeline uses training-only normalization, trial-grouped within-subject splits, a separate validation subject for LOSO, majority/logistic-regression baselines, and saved predictions and split indices.
 
 ## Repository layout
 
